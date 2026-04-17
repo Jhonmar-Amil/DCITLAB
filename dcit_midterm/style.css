@@ -1,0 +1,226 @@
+/* --- Global Styles & Resets --- */
+:root {
+    --back: #005f10; 
+    --letter: #b5c717; 
+    --text-dark: #131313;
+    --text-light: #ddda39;
+    --bg-light: #e6ff8b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* --- Navigation --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: var(--back);
+    color: var(--text-light);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Interactive Feature 3 (CSS part): Nav scroll effect */
+nav.scrolled {
+    background-color: #318631;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--letter);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--letter);
+}
+
+/* --- Sections & Layout --- */
+.section {
+    padding: 80px 5% 40px 5%;
+    min-height: 50vh;
+
+}
+
+.resume-content p {
+    text-indent: 40px; 
+}
+.resume-content ul {
+    text-indent: 40px; 
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--back);
+}
+
+/* --- Header / Home --- */
+.header-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--bg-light);
+    padding-top: 60px;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--back);
+    color: var(--text-light);
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--letter);
+    color: var(--text-dark);
+}
+
+.secondary-btn {
+    background-color: #005f10;
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+/* --- Project Grid --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 4px solid var(--letter);
+}
+.project-card img {
+    width: 100%;          
+    height: 200px;        
+    object-fit: cover;    
+    border-radius: 4px;   
+    margin-bottom: 15px;  
+}
+/* --- Contact Form --- */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.feedback-msg {
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--back);
+    color: var(--text-light);
+    padding: 40px 5% 20px 5%;
+    text-align: center;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.cvsu-statement h4 {
+    color: var(--letter);
+    margin-bottom: 10px;
+}
+
+.cvsu-statement p {
+    font-size: 0.9rem;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 20px;
+    font-size: 0.8rem;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* In a real scenario, you'd add a hamburger menu here */
+    }
+    
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .footer-container {
+        text-align: center;
+    }
+}
